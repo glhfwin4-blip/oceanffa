@@ -1,0 +1,124 @@
+prefix: "&3&lOCEAN FFA &8» "
+messages:
+  no-permission: "&cYou don't have permission."
+  player-only: "&cThis command can only be used in-game."
+  not-enough: "&cYou need &e%cost% tokens&c."
+  purchased: "&aPurchased &f%item% &afor &e%cost% tokens&a."
+  daily-claimed: "&aDaily reward claimed! You received &e%amount% tokens&a."
+  daily-wait: "&cYou've already claimed your daily reward. Try again in &e%time%&c."
+  token-earned: "&a+%amount% token(s) for eliminating &f%player%&a!"
+  block-decayed: "&7Your temporary block has decayed."
+  reloaded: "&aConfiguration reloaded."
+  invalid-player: "&cThat player must be online."
+  invalid-number: "&cEnter a valid non-negative whole number."
+  admin-usage: "&cUsage: /oceanadmin <give|set|reload> ..."
+
+spawn:
+  world: ""
+  x: 0.5
+  y: 100
+  z: 0.5
+  yaw: 0
+  pitch: 0
+  protection-radius: 12
+pvp-region:
+  world: ""
+  pos1: ""
+  pos2: ""
+tokens:
+  per-kill: 1
+  points-per-kill: 1
+blocks:
+  decay-min-seconds: 20
+  decay-max-seconds: 30
+leaderboard:
+  refresh-seconds: 60
+  top-entries: 10
+  kills-offset-y: 3.2
+  points-offset-y: 1.1
+  deaths-offset-y: -1.0
+
+daily:
+  token-reward: 10
+  cooldown-hours: 24
+
+kits:
+  starter:
+    slot: 11
+    material: STONE_SWORD
+    name: "&aStarter Kit"
+    lore:
+      - "&7A simple kit to get started."
+    cooldown-hours: 24
+    items:
+      - "STONE_SWORD:1"
+      - "STONE_AXE:1"
+      - "COOKED_BEEF:16"
+  archer:
+    slot: 13
+    material: BOW
+    name: "&bArcher Kit"
+    lore:
+      - "&7Bow and arrows for ranged fights."
+    cooldown-hours: 24
+    items:
+      - "BOW:1"
+      - "ARROW:32"
+      - "STONE_SWORD:1"
+  tank:
+    slot: 15
+    material: IRON_CHESTPLATE
+    name: "&6Tank Kit"
+    lore:
+      - "&7Extra protection for close combat."
+    cooldown-hours: 24
+    items:
+      - "IRON_CHESTPLATE:1"
+      - "STONE_SWORD:1"
+      - "COOKED_BEEF:16"
+
+shop:
+  title: "&0Ocean FFA - Token Shop"
+  rows: 3
+  items:
+    sharp_sword:
+      slot: 10
+      material: DIAMOND_SWORD
+      name: "&bCustom Diamond Sword"
+      lore: ["&7A sharp sword for FFA.", "&eCost: 15 tokens"]
+      cost: 15
+      amount: 1
+      enchantments:
+        sharpness: 2
+        unbreaking: 2
+    power_bow:
+      slot: 12
+      material: BOW
+      name: "&dPower Bow"
+      lore: ["&7A bow with extra power.", "&eCost: 12 tokens"]
+      cost: 12
+      amount: 1
+      enchantments:
+        power: 2
+        unbreaking: 1
+    golden_apples:
+      slot: 14
+      material: GOLDEN_APPLE
+      name: "&6Golden Apples x4"
+      lore: ["&7Four golden apples.", "&eCost: 8 tokens"]
+      cost: 8
+      amount: 4
+      enchantments: {}
+    knockback_stick:
+      slot: 16
+      material: STICK
+      name: "&eKnockback Stick"
+      lore: ["&7Knock enemies away.", "&eCost: 10 tokens"]
+      cost: 10
+      amount: 1
+      enchantments:
+        knockback: 2
+
+settings:
+  allow-sounds: true
+  allow-private-messages: true

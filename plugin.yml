@@ -1,0 +1,36 @@
+name: OceanFFA
+version: 1.1.0
+main: dev.oceanffa.OceanFFA
+api-version: '1.21'
+author: OceanFFA
+description: Ocean FFA player commands, stats, kits, tokens, shops, daily rewards and temporary blocks.
+commands:
+  spawn:
+    description: Teleport to the world spawn.
+  kits:
+    description: Open the kits GUI.
+  stats:
+    description: View your or another player's FFA statistics.
+    usage: /stats [player]
+  kills:
+    description: Show your total player kills.
+  balance:
+    description: Show your token balance.
+    aliases: [bal]
+  shop:
+    description: Open the token shop.
+  daily:
+    description: Open daily rewards.
+  rewards:
+    description: Open the rewards menu.
+  ping:
+    description: Show your connection latency.
+  settings:
+    description: Open personal gameplay settings.
+  oceanadmin:
+    description: OceanFFA admin tools.
+    usage: /oceanadmin <give|set|reload|pvp1|pvp2|leaderboard> ...
+permissions:
+  oceanffa.admin:
+    description: Manage OceanFFA, set the PvP region, and create leaderboards.
+    default: op
