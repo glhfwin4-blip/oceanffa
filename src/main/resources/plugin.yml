@@ -1,5 +1,5 @@
 name: OceanFFA
-version: 1.1.0
+version: 1.2.0
 main: dev.oceanffa.OceanFFA
 api-version: '1.21'
 author: OceanFFA
@@ -34,3 +34,6 @@ permissions:
   oceanffa.admin:
     description: Manage OceanFFA, set the PvP region, and create leaderboards.
     default: op
+  oceanffa.booster:
+    description: Access the Discord booster kit.
+    default: false
