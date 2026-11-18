@@ -1,3 +1,4 @@
+
 prefix: "&3&lOCEAN FFA &8» "
 messages:
   no-permission: "&cYou don't have permission."
@@ -21,16 +22,22 @@ spawn:
   yaw: 0
   pitch: 0
   protection-radius: 12
+
+# This region controls temporary block decay only.
+# Set its corners using /oceanadmin pvp1 and /oceanadmin pvp2.
 pvp-region:
   world: ""
   pos1: ""
   pos2: ""
+
 tokens:
   per-kill: 1
   points-per-kill: 1
+
 blocks:
   decay-min-seconds: 20
   decay-max-seconds: 30
+
 leaderboard:
   refresh-seconds: 60
   top-entries: 10
@@ -43,81 +50,144 @@ daily:
   cooldown-hours: 24
 
 kits:
-  starter:
+  iron:
     slot: 11
-    material: STONE_SWORD
-    name: "&aStarter Kit"
-    lore:
-      - "&7A simple kit to get started."
-    cooldown-hours: 24
-    items:
-      - "STONE_SWORD:1"
-      - "STONE_AXE:1"
-      - "COOKED_BEEF:16"
-  archer:
-    slot: 13
-    material: BOW
-    name: "&bArcher Kit"
-    lore:
-      - "&7Bow and arrows for ranged fights."
-    cooldown-hours: 24
-    items:
-      - "BOW:1"
-      - "ARROW:32"
-      - "STONE_SWORD:1"
-  tank:
-    slot: 15
     material: IRON_CHESTPLATE
-    name: "&6Tank Kit"
+    name: "&f&lIRON KIT"
     lore:
-      - "&7Extra protection for close combat."
+      - "&7Full iron armour and tools"
+      - "&7Includes 8 golden apples"
+      - "&aAvailable to everyone"
     cooldown-hours: 24
     items:
+      - "IRON_HELMET:1"
       - "IRON_CHESTPLATE:1"
-      - "STONE_SWORD:1"
-      - "COOKED_BEEF:16"
+      - "IRON_LEGGINGS:1"
+      - "IRON_BOOTS:1"
+      - "IRON_SWORD:1"
+      - "IRON_PICKAXE:1"
+      - "IRON_AXE:1"
+      - "IRON_SHOVEL:1"
+      - "GOLDEN_APPLE:8"
+
+  diamond:
+    slot: 13
+    material: DIAMOND_CHESTPLATE
+    name: "&b&lDIAMOND KIT"
+    lore:
+      - "&7Full diamond armour and tools"
+      - "&7Includes 12 golden apples"
+      - "&eAvailable to everyone"
+    cooldown-hours: 48
+    items:
+      - "DIAMOND_HELMET:1"
+      - "DIAMOND_CHESTPLATE:1"
+      - "DIAMOND_LEGGINGS:1"
+      - "DIAMOND_BOOTS:1"
+      - "DIAMOND_SWORD:1"
+      - "DIAMOND_PICKAXE:1"
+      - "DIAMOND_AXE:1"
+      - "DIAMOND_SHOVEL:1"
+      - "GOLDEN_APPLE:12"
+
+  booster:
+    slot: 15
+    material: NETHERITE_CHESTPLATE
+    name: "&d&lDISCORD BOOSTER KIT"
+    lore:
+      - "&7Premium netherite armour and tools"
+      - "&7Protection IV armour"
+      - "&7Sharpness V sword"
+      - "&7Includes 16 golden apples"
+      - "&dRequires Discord server boost"
+    permission: "oceanffa.booster"
+    cooldown-hours: 72
+    items:
+      - "NETHERITE_HELMET:1:protection:4"
+      - "NETHERITE_CHESTPLATE:1:protection:4"
+      - "NETHERITE_LEGGINGS:1:protection:4"
+      - "NETHERITE_BOOTS:1:protection:4"
+      - "NETHERITE_SWORD:1:sharpness:5"
+      - "NETHERITE_PICKAXE:1:efficiency:5"
+      - "NETHERITE_AXE:1:efficiency:5"
+      - "NETHERITE_SHOVEL:1:efficiency:5"
+      - "GOLDEN_APPLE:16"
 
 shop:
-  title: "&0Ocean FFA - Token Shop"
+  title: "&0&lOCEAN FFA - ELITE SHOP"
   rows: 3
   items:
-    sharp_sword:
+    diamond_sword:
       slot: 10
       material: DIAMOND_SWORD
-      name: "&bCustom Diamond Sword"
-      lore: ["&7A sharp sword for FFA.", "&eCost: 15 tokens"]
-      cost: 15
+      name: "&b&lElite Diamond Sword"
+      lore: ["&7Sharpness III", "&7Unbreaking III", "&eCost: 250 tokens"]
+      cost: 250
+      amount: 1
+      enchantments:
+        sharpness: 3
+        unbreaking: 3
+
+    diamond_armor:
+      slot: 11
+      material: DIAMOND_CHESTPLATE
+      name: "&b&lDiamond Chestplate"
+      lore: ["&7Protection III", "&7Unbreaking III", "&eCost: 400 tokens"]
+      cost: 400
+      amount: 1
+      enchantments:
+        protection: 3
+        unbreaking: 3
+
+    enchanted_golden_apple:
+      slot: 12
+      material: ENCHANTED_GOLDEN_APPLE
+      name: "&6&lEnchanted Golden Apple"
+      lore: ["&7A rare premium survival item", "&eCost: 1500 tokens"]
+      cost: 1500
+      amount: 1
+      enchantments: {}
+
+    golden_apples:
+      slot: 13
+      material: GOLDEN_APPLE
+      name: "&6Golden Apples x8"
+      lore: ["&7Eight golden apples", "&eCost: 180 tokens"]
+      cost: 180
+      amount: 8
+      enchantments: {}
+
+    netherite_sword:
+      slot: 14
+      material: NETHERITE_SWORD
+      name: "&d&lNetherite Sword"
+      lore: ["&7Sharpness II", "&7Unbreaking II", "&eCost: 1200 tokens"]
+      cost: 1200
       amount: 1
       enchantments:
         sharpness: 2
         unbreaking: 2
-    power_bow:
-      slot: 12
-      material: BOW
-      name: "&dPower Bow"
-      lore: ["&7A bow with extra power.", "&eCost: 12 tokens"]
-      cost: 12
+
+    netherite_pickaxe:
+      slot: 15
+      material: NETHERITE_PICKAXE
+      name: "&dNetherite Pickaxe"
+      lore: ["&7Efficiency III", "&7Unbreaking III", "&eCost: 1000 tokens"]
+      cost: 1000
       amount: 1
       enchantments:
-        power: 2
-        unbreaking: 1
-    golden_apples:
-      slot: 14
-      material: GOLDEN_APPLE
-      name: "&6Golden Apples x4"
-      lore: ["&7Four golden apples.", "&eCost: 8 tokens"]
-      cost: 8
-      amount: 4
-      enchantments: {}
-    knockback_stick:
+        efficiency: 3
+        unbreaking: 3
+
+    diamond_helmet:
       slot: 16
-      material: STICK
-      name: "&eKnockback Stick"
-      lore: ["&7Knock enemies away.", "&eCost: 10 tokens"]
-      cost: 10
+      material: DIAMOND_HELMET
+      name: "&bDiamond Helmet"
+      lore: ["&7Protection III", "&eCost: 300 tokens"]
+      cost: 300
       amount: 1
       enchantments:
-        knockback: 2
+        protection: 3
 
 settings:
   allow-sounds: true
